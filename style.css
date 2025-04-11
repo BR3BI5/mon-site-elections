@@ -1,6 +1,6 @@
 body {
   font-family: 'Playfair Display', serif;
-  max-width: 750px;
+  max-width: 800px;
   margin: auto;
   padding: 30px;
   background-color: #fafafa;
@@ -27,37 +27,9 @@ h1 {
   color: #555;
 }
 
-.search-note {
-  font-size: 0.9em;
-  color: #888;
-}
-
-section {
-  margin-bottom: 30px;
-}
-
-h3 {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 5px;
-}
-
-ul {
-  list-style: disc;
-  margin-left: 20px;
-}
-
-a {
-  color: #3b4cff;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 .search-container {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 #searchBox {
@@ -86,4 +58,23 @@ a:hover {
 
 .suggestion-item:hover {
   background-color: #f0f0f0;
+}
+
+h3 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+a {
+  color: #3b4cff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
