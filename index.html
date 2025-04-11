@@ -50,18 +50,35 @@
       <li>3</li>
     </ul>
   </section>
-  <script>
-function filterList() {
-  const input = document.getElementById('searchInput');
-  const filter = input.value.toLowerCase();
-  const list = document.getElementById('searchList');
-  const items = list.getElementsByTagName('li');
+<script>
+const elections = [
+  { name: "Présidentielles françaises 2022", url: "#" },
+  { name: "Élections fédérales allemandes 2021", url: "#" },
+  { name: "Élections générales australiennes 2022", url: "#" },
+  { name: "Élections présidentielles américaines 2020", url: "#" },
+  // Tu peux en rajouter ici !
+];
 
-  for (let i = 0; i < items.length; i++) {
-    const txt = items[i].textContent || items[i].innerText;
-    items[i].style.display = txt.toLowerCase().includes(filter) ? '' : 'none';
-  }
+function showSuggestions() {
+  const input = document.getElementById("searchBox");
+  const filter = input.value.toLowerCase();
+  const box = document.getElementById("suggestions");
+  box.innerHTML = "";
+
+  if (filter === "") return;
+
+  const matches = elections.filter(e => e.name.toLowerCase().includes(filter));
+
+  matches.forEach(match => {
+    const div = document.createElement("div");
+    div.textContent = match.name;
+    div.classList.add("suggestion-item");
+    div.onclick = () => {
+      window.location.href = match.url; // tu peux changer "#" en vraie page plus tard
+    };
+    box.appendChild(div);
+  });
 }
-</script
+</script>
 </body>
 </html>
