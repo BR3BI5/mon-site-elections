@@ -53,5 +53,18 @@
       <li>3</li>
     </ul>
   </section>
+  <script>
+function filterList() {
+  const input = document.getElementById('searchInput');
+  const filter = input.value.toLowerCase();
+  const list = document.getElementById('searchList');
+  const items = list.getElementsByTagName('li');
+
+  for (let i = 0; i < items.length; i++) {
+    const txt = items[i].textContent || items[i].innerText;
+    items[i].style.display = txt.toLowerCase().includes(filter) ? '' : 'none';
+  }
+}
+</script
 </body>
 </html>
