@@ -1,0 +1,29 @@
+[
+  {
+    "annee": "2022",
+    "pays": "France",
+    "type": "Présidentielles",
+    "tour1": [
+      { "nom": "Emmanuel Macron", "voix": 27.85 },
+      { "nom": "Marine Le Pen", "voix": 23.15 },
+      { "nom": "Jean-Luc Mélenchon", "voix": 21.95 }
+    ],
+    "tour2": [
+      { "nom": "Emmanuel Macron", "voix": 58.55 },
+      { "nom": "Marine Le Pen", "voix": 41.45 }
+    ]
+  },
+  {
+    "annee": "2017",
+    "pays": "France",
+    "type": "Présidentielles",
+    "tour1": [
+      { "nom": "Emmanuel Macron", "voix": 24.01 },
+      { "nom": "Marine Le Pen", "voix": 21.30 }
+    ],
+    "tour2": [
+      { "nom": "Emmanuel Macron", "voix": 66.10 },
+      { "nom": "Marine Le Pen", "voix": 33.90 }
+    ]
+  }
+]
