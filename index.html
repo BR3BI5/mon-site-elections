@@ -11,12 +11,12 @@
     <h1>Accueil</h1>
     <h2 class="title-site">Electios 🗳️</h2>
     <p class="subtitle">Un site d'archives des résultats des élections à travers le monde.</p>
-    <p class="search-note">
-     <div class="search-container">
-  <input type="text" id="searchBox" placeholder="Rechercher une élection..." oninput="showSuggestions()" autocomplete="off">
-  <div id="suggestions" class="suggestions-box"></div>
-</div>
   </header>
+
+  <div class="search-container">
+    <input type="text" id="searchBox" placeholder="Rechercher une élection..." oninput="showSuggestions()" autocomplete="off">
+    <div id="suggestions" class="suggestions-box"></div>
+  </div>
 
   <hr>
 
@@ -34,51 +34,51 @@
   <section>
     <h3>En France</h3>
     <ul>
-      <li><a href="france.html">Élections européennes</a></li>
       <li><a href="france.html">Élections présidentielles</a></li>
+      <li><a href="#">Élections européennes</a></li>
       <li><a href="#">Élections législatives</a></li>
-      <li><a href="#">Élections régionales</a></li>
       <li><a href="#">Élections municipales</a></li>
+      <li><a href="#">Élections régionales</a></li>
     </ul>
   </section>
 
   <section>
     <h3>Élections récentes</h3>
     <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
+      <li><a href="#">Élections générales australiennes 2022</a></li>
+      <li><a href="#">Élections fédérales allemandes 2021</a></li>
+      <li><a href="#">Élections présidentielles américaines 2020</a></li>
     </ul>
   </section>
-<script>
-const elections = [
-  { name: "Présidentielles françaises 2022", url: "#" },
-  { name: "Élections fédérales allemandes 2021", url: "#" },
-  { name: "Élections générales australiennes 2022", url: "#" },
-  { name: "Élections présidentielles américaines 2020", url: "#" },
-  // Tu peux en rajouter ici !
-];
 
-function showSuggestions() {
-  const input = document.getElementById("searchBox");
-  const filter = input.value.toLowerCase();
-  const box = document.getElementById("suggestions");
-  box.innerHTML = "";
+  <script>
+    const elections = [
+      { name: "Présidentielles françaises 2022", url: "#" },
+      { name: "Élections fédérales allemandes 2021", url: "#" },
+      { name: "Élections générales australiennes 2022", url: "#" },
+      { name: "Élections présidentielles américaines 2020", url: "#" },
+    ];
 
-  if (filter === "") return;
+    function showSuggestions() {
+      const input = document.getElementById("searchBox");
+      const filter = input.value.toLowerCase();
+      const box = document.getElementById("suggestions");
+      box.innerHTML = "";
 
-  const matches = elections.filter(e => e.name.toLowerCase().includes(filter));
+      if (filter === "") return;
 
-  matches.forEach(match => {
-    const div = document.createElement("div");
-    div.textContent = match.name;
-    div.classList.add("suggestion-item");
-    div.onclick = () => {
-      window.location.href = match.url; // tu peux changer "#" en vraie page plus tard
-    };
-    box.appendChild(div);
-  });
-}
-</script>
+      const matches = elections.filter(e => e.name.toLowerCase().includes(filter));
+
+      matches.forEach(match => {
+        const div = document.createElement("div");
+        div.textContent = match.name;
+        div.classList.add("suggestion-item");
+        div.onclick = () => {
+          window.location.href = match.url;
+        };
+        box.appendChild(div);
+      });
+    }
+  </script>
 </body>
 </html>
