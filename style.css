@@ -55,15 +55,35 @@ a:hover {
   text-decoration: underline;
 }
 
-#searchInput {
+.search-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+#searchBox {
   width: 100%;
   padding: 10px;
-  margin-bottom: 15px;
   font-size: 1em;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
-#searchList li {
-  margin-bottom: 6px;
+.suggestions-box {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  width: 100%;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
 }
