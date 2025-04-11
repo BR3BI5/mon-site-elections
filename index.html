@@ -12,13 +12,10 @@
     <h2 class="title-site">Electios 🗳️</h2>
     <p class="subtitle">Un site d'archives des résultats des élections à travers le monde.</p>
     <p class="search-note">
-      <input type="text" id="searchInput" placeholder="Rechercher une élection..." onkeyup="filterList()">
-<ul id="searchList">
-  <li>Élections générales australiennes de 2022</li>
-  <li>Élections fédérales allemandes de 2021</li>
-  <li>Élections présidentielles américaines de 2020</li>
-  <li>Présidentielles françaises de 2022</li>
-</ul>
+     <div class="search-container">
+  <input type="text" id="searchBox" placeholder="Rechercher une élection..." oninput="showSuggestions()" autocomplete="off">
+  <div id="suggestions" class="suggestions-box"></div>
+</div>
   </header>
 
   <hr>
